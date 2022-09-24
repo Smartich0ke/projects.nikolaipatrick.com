@@ -1,0 +1,4 @@
+baseURL = 'http://projects.nikolaipatrick.com/'
+languageCode = 'en-us'
+title = 'Projects'
+theme = "dark_lake"
