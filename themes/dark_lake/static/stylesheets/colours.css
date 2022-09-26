@@ -1,0 +1,15 @@
+:root {
+    --main-bg-colour: var(--plainWhite);
+    --plainWhite: #ffffff;
+    --alternate-bg-colour: #e0edf5;
+    --accent-1: #0a1922;
+    --accent-2: #103145;
+    --accent-3: #133951;
+    --highlight-1: #adb9c0;
+    --highlight-2: #808080;
+    --highlight-3: #4d4c4c;
+    
+}
+@media (prefers-color-scheme: dark) {
+
+}
