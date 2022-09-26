@@ -10,6 +10,32 @@
     --highlight-3: #4d4c4c;
     
 }
+@media (prefers-color-scheme: light) {
+    aside ul li a {
+        color: var(--highlight-3);
+    }
+}
 @media (prefers-color-scheme: dark) {
 
+    :root {
+        --main-bg-colour: #23272E;
+        --plainWhite: #ffffff;
+        --alternate-bg-colour: #1E2227;
+        --accent-1: #0a1922;
+        --accent-2: #103145;
+        --accent-3: #133951;
+        --highlight-1: #adb9c0;
+        --highlight-2: #808080;
+        --highlight-3: #4d4c4c; 
+    }
+
+    aside ul li a {
+        color: var(--highlight-1);
+    }
+    main{
+        color: var(--highlight-1);
+    }
+    aside {
+        color: var(--highlight-1);
+    }
 }
