@@ -1,12 +1,32 @@
-{{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ partial "metadata.html" . }}
-    <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
-    </a>
-</p>
-{{ end }}
-{{ end }}
+<!DOCTYPE html>
+<html>
+    <head>
+        {{- partial "head.html" . -}}
+    </head>
+    
+    <body>
+        <header>
+            {{- partial "header.html" . -}}
+        </header>
+            <main>
+                    <h1>{{ .Title }}</h1>
+                         <!-- Renders the li.html content view for each content/posts/*.md -->
+                             {{ range .Pages }}
+                             <article class="articleListItem">
+                                <div class="articleTitleFlex">
+                                <a class="articleTitle" href="{{ .RelPermalink }}">{{.Title}}</a>
+                                <p class="articleDate">{{.Date.Format "02/01/2006"}}</p>
+                            </div>
+                                <div class="articleTagsContainer">
+                                    {{range .Params.tags}}<a class="articleTag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}
+                                </div>
+                                <p class="articleSummary">{{.Summary}}</p>
+                             </article>
+                             {{ end }}
+            </main>
+        <footer>
+            {{- partial "footer.html" . -}}
+        </footer>
+        
+    </body>
+</html>
