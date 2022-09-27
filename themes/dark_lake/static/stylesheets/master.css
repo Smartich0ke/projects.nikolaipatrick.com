@@ -1,5 +1,40 @@
 @import url(fonts.css);
 @import url(colours.css);
+@media screen and (max-width: 1200px) {
+    aside {
+        width: 30vw !important;
+    }
+}
+@media screen and (max-width: 700px) {
+.lightDarkToggle {
+    display: none;
+}
+.alternateDarkModeSwitch {
+    display: block !important;
+}
+.backToMainSite {
+    display: none !important;
+}
+.navContentFlex {
+    flex-direction: column-reverse !important;
+}
+aside {
+    width: 100vw !important;
+}
+main {
+    width: 85% !important;
+}
+header {
+    justify-content: center !important;
+}
+}
+code {
+    white-space: pre-line;
+    background-color: var(--accent-2);
+    display: block;
+    padding: 10px;
+    border-radius: 7px;
+}
 body {
   font-family: lato-regular;  
   margin: 0;
@@ -15,16 +50,44 @@ header {
   background-color: #0a1922;
   justify-content: space-between;
 }
+.lightDarkToggle {
+    filter: invert(100%);
+    margin-right: 20px;
+    transition: ease-in 0.3s;
+}
+.lightDarkToggle:hover {
+    /*rotate: 180deg;*/
+    /*translate: -32px;*/
+    cursor: pointer;
+    filter: invert(80%);
+}
+.alternateDarkModeSwitch {
+    display: none;
+    filter: invert(100%);
+    margin-right: 20px;
+    transition: ease-in 0.3s;
+}
+.alternateDarkModeSwitch:hover {
+    /*rotate: 180deg;*/
+    /*translate: -32px;*/
+    cursor: pointer;
+    filter: invert(80%);
+}
 .siteTitle {
     display: inline-block;
     padding: 10px 10px 10px 20px;
     font-family: lato-regular;
-    color: var(--plainWhite);
+    color: var(--highlight-1);
+}
+.linksBox {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .backToMainSite {
     display: inline-block;
     padding-left: 10px;
-    color: var(--plainWhite);
+    color: var(--highlight-1);
     text-decoration: none;
     background-color: var(--accent-2);
     border-radius: 5px;
@@ -45,6 +108,8 @@ header {
 }
 footer {
     color: var(--highlight-1);
+    margin-left: 2%;
+    margin-right: 2%;
 }
 footer a {
     text-decoration: none;
@@ -53,23 +118,24 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
-    color: var(--plainWhite);
+    color: var(--highlight-2);
 }
 time {
     margin: 0 auto;
 }
 aside{
     display: inline-block;
+    width: 20vw;
 }
 aside ul li a{
     text-decoration: none;
-    
-    font-size: 18px;
+    color: var(--highlight-2);
+    font-size: 16px;
 
 }
 aside ul li a:hover {
     
-    color: var(--highlight-2);
+    color: var(--highlight-3);
 }
 aside ul li {
     padding-top: 5px;
@@ -86,10 +152,8 @@ main {
 aside ul{
     list-style: none;
     padding-left: 0px;
-    padding: 30px 50px 50vh 30px;
-    width: 15vw;
+    padding: 30px 50px 30px 30px; 
     background-color: var(--alternate-bg-colour);
-    display: inline-block;
     margin: 0;
 }
 hr {
@@ -111,4 +175,68 @@ hr {
 }
 article p {
     line-height: 1.5;
+}
+.footerFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.headerButtonsFlex {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.externalLink {
+    filter: invert(100%);
+    padding-top: 5px;
+    padding-right: 4px;
+}
+.articleTitle {
+    font-family: lato-bold;
+    text-decoration: none;
+    font-size: 23px;
+    color: var(--highlight-1);
+}
+.articleTitle:hover {
+    text-decoration: underline;
+    color: var(--highlight-2);
+}
+.articleTitleFlex {
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.articleDate {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.articleListItem {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.articleTag {
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    background-color: var(--highlight-1);
+    color: var(--highlight-3);
+    border: 1px solid var(--highlight-1);
+    border-radius: 4px;
+    margin: 10px 15px 10px 0px;
+}
+.articleTag:hover {
+    /*text-decoration: underline;*/
+    background-color: var(--highlight-2);
+    border: 1px solid var(--highlight-2);
+}
+.articleTagsContainer {
+    display: flex;
+    flex-direction: row;
+}
+.articleSummary {
+    margin-top: 0;
 }
