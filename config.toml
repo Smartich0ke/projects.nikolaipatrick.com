@@ -2,3 +2,25 @@ baseURL = 'http://projects.nikolaipatrick.com/'
 languageCode = 'en-us'
 title = 'Projects'
 theme = "dark_lake"
+[menu]
+  [[menu.topnav]]
+    name = 'Home'
+    title = 'home/landing page'
+    url = "/"
+    weight = 1
+  [[menu.topnav]]
+    name = 'Tags'
+    title = 'tags page'
+    url = "/tags/"  
+    weight = 2  
+  [[menu.topnav]]
+    name = 'All Articles'
+    title = 'see list of all articles'
+    url = "/projects/"
+    weight = 3    
+  [[menu.topnav]]
+    name = 'GitHub'
+    title = 'Go to GitHub Profile'
+    url = 'https://github.com/Smartich0ke'   
+    pre =  '<span><img class="externalLink" src="/images/arrow-up-right-from-square-solid.svg" alt="" srcset="" height="12px" width="12px"></span>'
+    weight = 4 
