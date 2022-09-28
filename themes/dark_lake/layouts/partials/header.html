@@ -1,8 +1,9 @@
  <h1 class="siteTitle">{{ .Site.Title }}</h1>
 <div class="linksBox">
-    <a href="#">Home</a>
-    <a href="#">Categories</a>
-    <a href="#"><span><img class="externalLink" src="/images/arrow-up-right-from-square-solid.svg" alt="" srcset="" height="12px" width="12px"></span>GitHub</a>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.topnav }}
+    <a href="{{ .URL }}" title="{{ .Title }}">{{ .Pre }}{{ .Name }}</a>
+    {{ end }}
 </div>
 <div class="headerButtonsFlex">
     <script>

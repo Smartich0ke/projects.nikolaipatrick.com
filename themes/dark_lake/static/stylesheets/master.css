@@ -197,11 +197,11 @@ article p {
     font-family: lato-bold;
     text-decoration: none;
     font-size: 23px;
-    color: var(--highlight-1);
+    color: var(--highlight-2);
 }
 .articleTitle:hover {
     text-decoration: underline;
-    color: var(--highlight-2);
+    color: var(--highlight-1);
 }
 .articleTitleFlex {
     display: flex;
@@ -216,22 +216,20 @@ article p {
 }
 .articleListItem {
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .articleTag {
     padding: 5px 10px 5px 10px;
     text-decoration: none;
-    background-color: var(--highlight-1);
-    color: var(--highlight-3);
-    border: 1px solid var(--highlight-1);
+    background-color: var(--highlight-2);
+    color: var(--plainWhite);   
     border-radius: 4px;
     margin: 10px 15px 10px 0px;
 }
 .articleTag:hover {
     /*text-decoration: underline;*/
-    background-color: var(--highlight-2);
-    border: 1px solid var(--highlight-2);
+    background-color: var(--highlight-3);
 }
 .articleTagsContainer {
     display: flex;
@@ -239,4 +237,26 @@ article p {
 }
 .articleSummary {
     margin-top: 0;
+}
+.mainList {
+    width: 75%;
+}
+.tagListItem {
+    display: inline-block;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+.tagText {
+    font-size: 20px;
+}
+.tagListFlex {
+    display: flex;
+    flex-direction: column;
+}
+.tagArticleNo {
+    padding: 5px;
+    margin-left: 10px;
+    background-color: var(--highlight-3);
+    border-radius: 4px;
 }
