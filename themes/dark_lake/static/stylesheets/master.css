@@ -6,10 +6,13 @@
     }
 }
 @media screen and (max-width: 700px) {
-.lightDarkToggle {
+.footerFlex {
+    justify-content: space-evenly !important;
+}
+#primaryDarkToggle {
     display: none;
 }
-.alternateDarkModeSwitch {
+#secondaryDarkToggle {
     display: block !important;
 }
 .backToMainSite {
@@ -31,6 +34,7 @@ header {
 code {
     white-space: pre-line;
     background-color: var(--accent-2);
+    color: var(--highlight-1);
     display: block;
     padding: 10px;
     border-radius: 7px;
@@ -54,6 +58,11 @@ header {
     filter: invert(100%);
     margin-right: 20px;
     transition: ease-in 0.3s;
+
+}
+.themeButton {
+    background: none;
+    border: none;
 }
 .lightDarkToggle:hover {
     /*rotate: 180deg;*/
@@ -62,7 +71,6 @@ header {
     filter: invert(80%);
 }
 .alternateDarkModeSwitch {
-    display: none;
     filter: invert(100%);
     margin-right: 20px;
     transition: ease-in 0.3s;
@@ -147,7 +155,7 @@ main {
     margin-left: 42px;
     margin-top: 5px;
     background-color: inherit;
-
+    min-height: 100vh;
 } 
 aside ul{
     list-style: none;
@@ -220,16 +228,7 @@ article p {
     margin-bottom: 50px;
 }
 .articleTag {
-    padding: 5px 10px 5px 10px;
-    text-decoration: none;
-    background-color: var(--highlight-2);
-    color: var(--plainWhite);   
-    border-radius: 4px;
     margin: 10px 15px 10px 0px;
-}
-.articleTag:hover {
-    /*text-decoration: underline;*/
-    background-color: var(--highlight-3);
 }
 .articleTagsContainer {
     display: flex;
@@ -259,4 +258,32 @@ article p {
     margin-left: 10px;
     background-color: var(--highlight-3);
     border-radius: 4px;
+}
+.postTime {
+    margin-right: 10px;
+    display: block;
+}
+.button {
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    background-color: var(--highlight-2);
+    color: var(--plainWhite);   
+    border-radius: 4px;
+}
+.button:hover {
+    background-color: var(--highlight-3);
+}
+.tags {
+    display: flex;
+    flex-direction: row;
+}
+#secondaryDarkToggle {
+    display: none;
+}
+#primaryDarkToggle {
+}
+.recentPost {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 16px #0000001f;
 }
