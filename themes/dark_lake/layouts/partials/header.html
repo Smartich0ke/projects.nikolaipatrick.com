@@ -1,4 +1,5 @@
- <h1 class="siteTitle">{{ .Site.Title }}</h1>
+
+<h1 class="siteTitle">{{ .Site.Title }}</h1>
 <div class="linksBox">
     {{ $currentPage := . }}
     {{ range .Site.Menus.topnav }}
@@ -6,49 +7,8 @@
     {{ end }}
 </div>
 <div class="headerButtonsFlex">
-    <script>
-        togglestate = false;
-        function toggleDarkMode() {
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-            if (prefersDarkScheme.matches) {
-                document.body.classList.toggle("light-theme");
-            } else {
-                 document.body.classList.toggle("dark-theme");
-            }
-            if(togglestate == false) {
-                document.getElementById("lightDarkToggle").style.rotate = "180deg";
-                togglestate = true;
-                return;
-            }
-            if(togglestate == true) {
-                document.getElementById("lightDarkToggle").style.rotate = "0deg";
-                togglestate = false;
-                return;
-            }
-        }
-        function toggleDarkModeAlternate() {
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-            if (prefersDarkScheme.matches) {
-                document.body.classList.toggle("light-theme");
-            } else {
-                 document.body.classList.toggle("dark-theme");
-            }
-            if(togglestate == false) {
-                document.getElementById("lightDarkToggleAlternate").style.rotate = "180deg";
-                document.getElementById("lightDarkToggleAlternate").style.filter = "invert(0%)";
-                togglestate = true;
-                return;
-            }
-            if(togglestate == true) {
-                document.getElementById("lightDarkToggleAlternate").style.rotate = "0deg";
-                document.getElementById("lightDarkToggleAlternate").style.filter = "invert(100%)";
-                togglestate = false;
-                return;
-            }
-        }
-    </script>
-    <img onclick="toggleDarkMode()" id="lightDarkToggle" class="lightDarkToggle" src="/images/circle-half-stroke-solid.svg"
-        alt="light/dark" srcset="" height="24px" width="24px">
-    <a class="backToMainSite" href="http://nikolaipatrick.com">back to
-        nikolaipatrick.com</a>
+    <button id="primaryDarkToggle" class="themeButton">
+        <img id="rotateCircle" class="lightDarkToggle" src="/images/circle-half-stroke-solid.svg" alt="light/dark" srcset="" height="24px" width="24px">
+    </button>
+    <a class="backToMainSite" href="http://nikolaipatrick.com">back to nikolaipatrick.com</a>
 </div>
