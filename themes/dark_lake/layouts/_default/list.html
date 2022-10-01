@@ -18,7 +18,7 @@
                                 <p class="articleDate">{{.Date.Format "02/01/2006"}}</p>
                             </div>
                                 <div class="articleTagsContainer">
-                                    {{range .Params.tags}}<a class="articleTag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}
+                                    {{range .Params.tags}}<a class="button articleTag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}
                                 </div>
                                 <p class="articleSummary">{{.Summary}}</p>
                              </article>
