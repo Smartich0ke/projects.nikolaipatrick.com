@@ -8,9 +8,11 @@
         <header>
             {{- partial "header.html" . -}}
         </header>
+            
             <main class="tagListFlex">
+                <h1>Tags</h1>
                 {{ range .Data.Terms.Alphabetical }}
-                <a class="articleTag tagListItem" href="{{ .Page.Permalink }}"><span class="tagText">{{ .Page.Title }}</span><span class="tagArticleNo">{{ .Count }}</span></a>
+                <a class="button articleTag tagListItem" href="{{ .Page.Permalink }}"><span class="tagText">{{ .Page.Title }}</span><span class="tagArticleNo">{{ .Count }}</span></a>
                 {{ end }}
             </main>
         <footer>
