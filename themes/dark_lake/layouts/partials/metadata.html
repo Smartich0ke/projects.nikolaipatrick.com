@@ -1,11 +1,15 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-<i data-feather="calendar"></i>
 <time class="postTime" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+<div class="tags">
 {{ with .Params.tags }}
-<i data-feather="tag"></i>
+
 {{ range . }}
 {{ $href := print (absURL "tags/") (urlize .) }}
-<a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+
+    <a class="button articleTag" href="{{ $href }}">{{ . }}</a>
+
+
 {{ end }}
 {{ end }}
+</div>
