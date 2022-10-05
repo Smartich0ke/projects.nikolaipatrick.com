@@ -1,7 +1,33 @@
 baseURL = 'http://projects.nikolaipatrick.com/'
 languageCode = 'en-us'
 title = 'Projects'
-theme = "dark_lake"
+theme = 'dark_lake'
+copyright= 'thing'
+[params]
+
+  # The email address for the site author/maintainer:
+  email = 'nikolaipatricknp@gmail.com'
+
+  # The classification and categories
+  classification = 'Personal'
+  category = 'Projects'
+
+  # The type of website, is it a blog, a bio, etc.
+  medium = 'blog'
+
+  # The target audience for this site:
+  target = 'all'
+
+  # Like a movie rating, will the site contain 18+ content, XXX, etc?
+  rating = 'general' 
+
+[author]
+  [author.author]
+    name = "Nikolai Patrick"
+    locality = "Old Noarlunga"
+    region = "South Australia"
+    country = "Australia"
+
 [menu]
   [[menu.topnav]]
     name = 'Home'
