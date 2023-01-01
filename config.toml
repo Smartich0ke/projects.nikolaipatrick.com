@@ -1,9 +1,16 @@
+#© Copyright Nikolai Patrick 2022. All rights reserved.
+
 baseURL = 'http://projects.nikolaipatrick.com/'
 languageCode = 'en-us'
 title = 'Projects'
 theme = 'dark_lake'
 copyright= 'thing'
 [params]
+
+
+############
+# METADATA #
+############
 
   # The email address for the site author/maintainer:
   email = 'nikolaipatricknp@gmail.com'
@@ -19,6 +26,7 @@ copyright= 'thing'
   target = 'all'
 
   # Like a movie rating, will the site contain 18+ content, XXX, etc?
+  # Use one of the following: general, mature, restricted, adult, 14 years, safe for kids
   rating = 'general' 
 
 [author]
