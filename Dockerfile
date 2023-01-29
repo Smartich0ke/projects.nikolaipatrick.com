@@ -3,7 +3,8 @@ LABEL description="This is a custom nginx image for the projects.nikolaipatrick.
 LABEL maintainer="Nikolai Patrick (nikolai@artichoknetwork.com)"
 COPY . /data/build
 WORKDIR /data/build
-RUN apt-get update && apt-get install -y hugo
+RUN apt-get update && apt-get install -y hugo git
+RUN git submodule update --init --recursive
 RUN hugo
-RUN cp -r public/* /usr/share/nginx/html/
+RUN yes | cp -rf public/* /usr/share/nginx/html/
 EXPOSE 80
