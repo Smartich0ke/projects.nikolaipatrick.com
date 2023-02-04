@@ -7,7 +7,7 @@ theme = 'dark_lake'
 copyright= 'thing'
 [params]
 
-  googleAnalytics = 'G-3W5F046QEG'
+  GoogleAnalytics = 'G-3W5F046QEG'
 
 ############
 # METADATA #
